@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EmployeeReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="12345678-90ab-cdef-1234-567890abcdef">
+	<parameter name="createdBy" class="java.lang.String"/>
+	<parameter name="department" class="java.lang.String"/>
+	<parameter name="minSalary" class="java.lang.Double"/>
+	<parameter name="maxSalary" class="java.lang.Double"/>
+<!--	<queryString>-->
+<!--		<![CDATA[SELECT * FROM employee WHERE department = $P{department}]]>-->
+<!--	</queryString>-->
+	<field name="id" class="java.lang.Integer"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="department" class="java.lang.String"/>
+	<field name="salary" class="java.lang.Double"/>
+	<field name="doh" class="java.lang.String"/>
+	<title>
+		<band height="50">
+			<staticText>
+				<reportElement x="5" y="20" width="100" height="20" uuid="12345678-90ab-cdef-1234-567890abcdef"/>
+				<text><![CDATA[Company Address]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="90" height="20" uuid="78a53363-3fbf-4f65-ab7d-b3222b692366"/>
+				<textFieldExpression><![CDATA[$P{createdBy}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="12345678-90ab-cdef-1234-567890abcdef"/>
+				<text><![CDATA[Employee ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="12345678-90ab-cdef-1234-567890abcdef"/>
+				<text><![CDATA[Employee Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20" uuid="12345678-90ab-cdef-1234-567890abcdef"/>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="20" uuid="12345678-90ab-cdef-1234-567890abcdef"/>
+				<text><![CDATA[Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="100" height="20" uuid="12345678-90ab-cdef-1234-567890abcdef"/>
+				<text><![CDATA[Hire Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="130">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="12345678-90ab-cdef-1234-567890abcdef"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="12345678-90ab-cdef-1234-567890abcdef"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="12345678-90ab-cdef-1234-567890abcdef"/>
+				<textFieldExpression><![CDATA[$F{department}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="12345678-90ab-cdef-1234-567890abcdef"/>
+				<textFieldExpression><![CDATA[$F{salary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20" uuid="12345678-90ab-cdef-1234-567890abcdef"/>
+				<textFieldExpression><![CDATA[$F{doh}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

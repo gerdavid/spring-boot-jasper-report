@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EmployeeDetailsSubreport" language="groovy" pageWidth="200" pageHeight="100" columnWidth="180" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="12345678-90ab-cdef-1234-567890abcdef">
+	<detail>
+		<band height="20">
+			<textField>
+				<reportElement x="0" y="0" width="180" height="20" uuid="12345678-90ab-cdef-1234-567890abcdef"/>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<textField>
+				<reportElement x="0" y="0" width="180" height="20" uuid="12345678-90ab-cdef-1234-567890abcdef"/>
+				<textFieldExpression><![CDATA[$F{contactInfo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
